@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{0FE5EBA1-684F-427A-B917-9B43E2918B5C}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>LazyLib</RootNamespace>
+        <AssemblyName>LazyLib</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="mscorlib" />
+        <Reference Include="System" />
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+          <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net46\System.Data.SQLite.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+          <HintPath>..\packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139">
+          <HintPath>..\packages\System.Data.SQLite.Linq.1.0.113.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+          <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Xml" />
+    	<Reference Include="System.Windows.Forms" />
+    	<Reference Include="System.Drawing" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+<ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2" />
+    <Compile Include="Global.cs" />
+    <Compile Include="LazyLib\GeomertrySettings.cs" />
+    <Compile Include="LazyLib\Helpers\Camera.cs" />
+    <Compile Include="LazyLib\Helpers\Matrix.cs" />
+    <Compile Include="LazyLib\Helpers\Vector.cs" />
+    <Compile Include="LazyLib\Helpers\ChatQueu.cs" />
+    <Compile Include="LazyLib\Helpers\Fishing.cs" />
+    <Compile Include="LazyLib\Helpers\Mail\MailFrame.cs" />
+    <Compile Include="LazyLib\Helpers\Mail\AddedItemsStatus.cs" />
+    <Compile Include="LazyLib\Helpers\Mail\MailManager.cs" />
+    <Compile Include="LazyLib\Helpers\Mail\MailList.cs" />
+    <Compile Include="LazyLib\Helpers\ValidateKeys.cs" />
+    <Compile Include="LazyLib\Helpers\Vendor\ItemDatabase.cs" />
+    <Compile Include="LazyLib\Helpers\Vendor\ProtectedList.cs" />
+    <Compile Include="LazyLib\Helpers\Vendor\VendorManager.cs" />
+    <Compile Include="LazyLib\Helpers\WowHeadData.cs" />
+    <Compile Include="LazyLib\LActivity\Resting.cs" />
+    <Compile Include="LazyLib\Combat\CombatEngine.cs" />
+    <Compile Include="LazyLib\Combat\CombatResult.cs" />
+    <Compile Include="LazyLib\Combat\PullResult.cs" />
+    <Compile Include="LazyLib\ActionBar\BarItem.cs" />
+    <Compile Include="LazyLib\Combat\PAction.cs" />
+    <Compile Include="LazyLib\Combat\PDamageAction.cs" />
+    <Compile Include="LazyLib\Combat\PSelfBuffAction.cs" />
+    <Compile Include="LazyLib\Combat\PSelfHealAction.cs" />
+    <Compile Include="LazyLib\Helpers\GChatEventArgs.cs" />
+    <Compile Include="LazyLib\Helpers\ChatMsg.cs" />
+    <Compile Include="LazyLib\Helpers\Chat.cs" />
+    <Compile Include="LazyLib\Helpers\Inventory.cs" />
+    <Compile Include="LazyLib\Helpers\KeyBinding.cs" />
+    <Compile Include="LazyLib\Helpers\KeyBindings.cs" />
+    <Compile Include="LazyLib\Helpers\MicrosoftVirtualKeys.cs" />
+    <Compile Include="LazyLib\Helpers\RECT.cs" />
+    <Compile Include="LazyLib\Helpers\GamePosition.cs" />
+    <Compile Include="LazyLib\IEngine\ILazyEngine.cs" />
+    <Compile Include="LazyLib\FSM\Engine.cs" />
+    <Compile Include="LazyLib\FSM\MainState.cs" />
+    <Compile Include="LazyLib\FSM\StateIdle.cs" />
+    <Compile Include="LazyLib\Helpers\Frame.cs" />
+    <Compile Include="LazyLib\Helpers\InterfaceHelper.cs" />
+    <Compile Include="LazyLib\Helpers\ItemHelper.cs" />
+    <Compile Include="LazyLib\Helpers\KeyHelper.cs" />
+    <Compile Include="LazyLib\Helpers\KeyWrapper.cs" />
+    <Compile Include="LazyLib\Helpers\Langs.cs" />
+    <Compile Include="LazyLib\Helpers\LazyMath.cs" />
+    <Compile Include="LazyLib\Helpers\KeyLowHelper.cs" />
+    <Compile Include="LazyLib\ActionBar\BarMapper.cs" />
+    <Compile Include="LazyLib\Helpers\MouseMoveMessasge.cs" />
+    <Compile Include="LazyLib\Helpers\MouseBlocMessasge.cs" />
+    <Compile Include="LazyLib\Helpers\MouseHelper.cs" />
+    <Compile Include="LazyLib\Helpers\MoveHelper.cs" />
+    <Compile Include="LazyLib\ActionBar\KeyType.cs" />
+    <Compile Include="LazyLib\ActionBar\WowKey.cs" />
+    <Compile Include="LazyLib\IPlugin\ILazyPlugin.cs" />
+    <Compile Include="LazyLib\LazyRadar\Drawer\IDrawItem.cs" />
+    <Compile Include="LazyLib\LazyRadar\Drawer\DrawEnemies.cs" />
+    <Compile Include="LazyLib\LazyRadar\Drawer\DrawFriends.cs" />
+    <Compile Include="LazyLib\LazyRadar\Drawer\DrawObjects.cs" />
+    <Compile Include="LazyLib\LazyRadar\Drawer\DrawUnits.cs" />
+    <Compile Include="LazyLib\LazyRadar\IMouseClick.cs" />
+    <Compile Include="LazyLib\LazyRadar\RadarForm.cs" />
+    <Compile Include="LazyLib\Logging.cs" />
+    <Compile Include="LogType.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\EventMessage.cs" />
+    <Compile Include="LazyLib\Wow\Constants.cs" />
+    <Compile Include="LazyLib\Wow\Descriptors.cs" />
+    <Compile Include="LazyLib\Wow\Location.cs" />
+    <Compile Include="LazyLib\Helpers\Memory.cs" />
+    <Compile Include="LazyLib\Wow\ObjectManager.cs" />
+    <Compile Include="LazyLib\Wow\NotifyEventAttach.cs" />
+    <Compile Include="LazyLib\Wow\NotifyEventNoAttach.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NodeType.cs" />
+    <Compile Include="LazyLib\Wow\PObject.cs" />
+    <Compile Include="LazyLib\Wow\PContainer.cs" />
+    <Compile Include="LazyLib\Wow\Globals.cs" />
+    <Compile Include="LazyLib\Wow\PGameObject.cs" />
+    <Compile Include="LazyLib\Wow\PItem.cs" />
+    <Compile Include="LazyLib\Wow\PUnit.cs" />
+    <Compile Include="LazyLib\Wow\PPlayer.cs" />
+    <Compile Include="LazyLib\Wow\PPlayerSelf.cs" />
+    <Compile Include="LazyLib\Wow\Faction.cs" />
+    <Compile Include="LazyLib\Wow\Reaction.cs" />
+    <Compile Include="LazyLib\Wow\PublicPointers.cs" />
+    <Compile Include="LazyLib\Wow\Pointers.cs" />
+    <Compile Include="LazyLib\Helpers\IniManager.cs" />
+    <Compile Include="LazyLib\ActionBar\BarSpell.cs" />
+    <Compile Include="LazyLib\Helpers\Ticker.cs" />
+    <Compile Include="LazyLib\LazySettings.cs" />
+    <Compile Include="LazyLib\Resource.cs" />
+    <Compile Include="LazyLib\Dialogs\UnhandledExceptionDlg\SendExceptionClickEventArgs.cs" />
+    <Compile Include="LazyLib\Dialogs\UnhandledExceptionDlg\UnhandledExceptionDlg.cs" />
+    <Compile Include="LazyLib\Dialogs\UnhandledExceptionDlg\UnhandledExDlgForm.cs" />
+    <Compile Include="LazyLib\Helpers\Utilities.cs" />
+    <EmbeddedResource Include="LazyLib.LazyRadar.RadarForm.resources" />
+    <EmbeddedResource Include="LazyLib.Resource.resources" />
+    <EmbeddedResource Include="LazyLib.Dialogs.UnhandledExceptionDlg.UnhandledExDlgForm.resources" />
+  </ItemGroup>
+<ItemGroup>
+  <None Include="App.config" />
+  <None Include="packages.config" />
+</ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+      <PropertyGroup>
+        <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+      </PropertyGroup>
+      <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+      <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+      <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    </Target>
+    <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+    <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

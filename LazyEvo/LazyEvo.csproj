@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{7547204D-6B37-44BA-9419-0C52A178FA41}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>LazyEvo</RootNamespace>
+        <AssemblyName>LazyEvo</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    	<Reference Include="System.Drawing" />
+    	<Reference Include="System.Xml" />
+    	<Reference Include="System.Management" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+<ItemGroup>
+    <Reference Include="LazyLib" />
+    <Reference Include="DevComponents.DotNetBar2" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="QuickGraph" />
+    <Reference Include="curmoho" />
+    <Reference Include="CSScriptLibrary.v3.5" />
+    <Compile Include="Global.cs" />
+    <Compile Include="LazyEvo\Classes\CustomClass.cs" />
+    <Compile Include="LazyEvo\Classes\ClassCompiler.cs" />
+    <Compile Include="LazyEvo\Classes\PrivCombatHandler.cs" />
+    <Compile Include="LazyEvo\Classes\CustomEngine.cs" />
+    <Compile Include="LazyEvo\Classes\EngineCompiler.cs" />
+    <Compile Include="LazyEvo\Classes\CustomPlugin.cs" />
+    <Compile Include="LazyEvo\Classes\PluginCompiler.cs" />
+    <Compile Include="LazyEvo\Debug\NameValuePair.cs" />
+    <Compile Include="LazyEvo\Debug\PObjectUtils.cs" />
+    <Compile Include="LazyEvo\Debug\PPlayerSelfUtils.cs" />
+    <Compile Include="LazyEvo\Debug\PPlayerUtils.cs" />
+    <Compile Include="LazyEvo\Debug\PUnitUtils.cs" />
+    <Compile Include="LazyEvo\Forms\Debug.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\Followers.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\Geometry.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\Shutdown.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\StopAfter.cs" />
+    <Compile Include="LazyEvo\Forms\Wizard.cs" />
+    <Compile Include="LazyEvo\Hotkey.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\GatherProfiles.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\OnlineProfile.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\EProfileDownloaded.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Activity\ApproachPosFlying.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Activity\ToTown.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\LootedBlacklist.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\MarkedNode.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\SkillToLow.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\ToldAboutNode.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateFullBags.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateMailbox.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateRess.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateResting.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateToTown.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\GatherProfileForm.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\Stuck.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\Unstuck.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateVendor.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Activity\ToTown.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Activity\Train.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\DirectedLazyEdge.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\Converter.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\ConverterForm.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\GrindingBlackList.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\GrindingShouldTrain.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\Mount.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\PullController.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcClasses\Npc.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcClasses\Train.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcClasses\Trainer.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcClasses\TrainerDialog.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcClasses\Vendor.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcClasses\VendorType.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcClasses\TrainClass.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcClasses\VendorsEx.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\NpcController.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\PathControl.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\PathProfile.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\PlayerData.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\QuickGraph.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StateTrainer.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StateVendor.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\SubProfile.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\BadNodes.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\GatherBlackList.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Mode.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\GatherEngine.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\GatherSettings.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\FindNode.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\Herb.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\Mine.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\HelperFunctions.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\Mount.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\GatherProfile.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\FlyingWaypointsType.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\FlyingNavigation.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Helpers\FlyingNavigator.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Prio.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Radar\DrawNodes.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Radar\DrawWaypoints.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Radar\MouseHandler.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Settings.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateCombat.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateGather.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateMount.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\States\StateMoving.cs" />
+    <Compile Include="LazyEvo\LGatherEngine\Activity\Gather.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Mode.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\GrindingEngine.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\GrindingProfile.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\GrindingSettings.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\GrindingNavigation.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\GrindingNavigator.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\GrindingWaypointType.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Prio.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Radar\DrawWaypoints.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Settings.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StateLoot.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StateMoving.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StateResting.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StateResurrect.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StatePull.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StateToTown.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\Stuck.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\States\StateCombat.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Activity\LootAndSkin.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Activity\Resurrect.cs" />
+    <Compile Include="LazyEvo\LGrindEngine\Helpers\Unstuck.cs" />
+    <Compile Include="LazyEvo\Other\ScriptRunner.cs" />
+    <Compile Include="LazyEvo\Other\Hook.cs" />
+    <Compile Include="LazyEvo\PluginSystem\PluginManager.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\frmFrameDumper.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\FrameViewer.cs" />
+    <Compile Include="LazyEvo\Plugins\PeriodicRelogger.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Profession.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\RankFactory.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Rank.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Apprentice.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Journeyman.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Expert.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Artisan.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Master.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\GrandMaster.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Illustrious.cs" />
+    <Compile Include="LazyEvo\Plugins\ExtraLazy\Professions.cs" />
+    <Compile Include="LazyEvo\Plugins\LazyData\Loader.cs" />
+    <Compile Include="LazyEvo\Plugins\LazyData\generalChat.cs" />
+    <Compile Include="LazyEvo\Plugins\LazyData\frmProfessions.cs" />
+    <Compile Include="LazyEvo\Plugins\Relogger.cs" />
+    <Compile Include="LazyEvo\Plugins\ReloggerSettings.cs" />
+    <Compile Include="LazyEvo\Plugins\Encryptor.cs" />
+    <Compile Include="LazyEvo\Plugins\RotationPlugin\KeysData.cs" />
+    <Compile Include="LazyEvo\Plugins\RotationPlugin\RotatorForm.cs" />
+    <Compile Include="LazyEvo\Plugins\RotationPlugin\Rotation.cs" />
+    <Compile Include="LazyEvo\Plugins\RotationPlugin\RotationManagerController.cs" />
+    <Compile Include="LazyEvo\Plugins\RotationPlugin\RotationForm.cs" />
+    <Compile Include="LazyEvo\Plugins\RotationPlugin\RotationManagerForm.cs" />
+    <Compile Include="LazyEvo\Plugins\RotationPlugin\RotationSettings.cs" />
+    <Compile Include="LazyEvo\Plugins\RotationPlugin\RotatorStatus.cs" />
+    <Compile Include="LazyEvo\Public\Latency.cs" />
+    <Compile Include="LazyEvo\Public\LazyForm.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\BehaviorForm.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Action.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\ActionKey.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\ActionSpell.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\BehaviorController.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\ConditionTargetEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\ConditionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\AbstractCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\BuffConditionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\BuffOwnerConditionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\BuffValueEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\BuffCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\CombatCountCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\ComboPointsCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\SpellConditionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\SpellCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\DistanceToTarget.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\FunctionsConditionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\FunctionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\FunctionsCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\ConditionTypeEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\HealthPowerCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\HealthStoneCount.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\MageFoodCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\MageWaterCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\PetConditionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\PetCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\PotentialAddsCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\RuneEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\RuneCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\SoulShardCountCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\TempEnchantConditionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\WeaponEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\TempEnchantCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\TickerConditionEnum.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Conditions\TickerCondition.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Target.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Rule.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\RuleController.cs" />
+    <Compile Include="LazyEvo\Public\CombatType.cs" />
+    <Compile Include="LazyEvo\Public\GCombatEventArgs.cs" />
+    <Compile Include="LazyEvo\Public\CombatHandler.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Spec.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\Type.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Behavior\AddToBehavior.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Builders\Deathknight.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Builders\DeathknightBuilder.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Builders\PaladinBuilder.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\Builders\Paladin.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\PVEBehaviorCombat.cs" />
+    <Compile Include="LazyEvo\Public\LazyHelpers.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\PveBehaviorSettings.cs" />
+    <Compile Include="LazyEvo\Public\PBlackList.cs" />
+    <Compile Include="LazyEvo\Public\PPullBlackList.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\LazyForms.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\CheckUpdate.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\DoLoad.cs" />
+    <Compile Include="LazyEvo\Forms\Main.cs" />
+    <Compile Include="LazyEvo\Forms\Setup.cs" />
+    <Compile Include="LazyEvo\Forms\Plugin.cs" />
+    <Compile Include="LazyEvo\Program.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\RefreshGui.cs" />
+    <Compile Include="LazyEvo\Forms\Selector.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\RuleEditor.cs" />
+    <Compile Include="LazyEvo\Forms\Helpers\ThreadManager.cs" />
+    <Compile Include="LazyEvo\PVEBehavior\ScriptEditor.cs" />
+    <Compile Include="LazyEvo\Properties\Resources.cs" />
+    <EmbeddedResource Include="LazyEvo.Forms.Debug.resources" />
+    <EmbeddedResource Include="LazyEvo.Forms.Wizard.resources" />
+    <EmbeddedResource Include="LazyEvo.LGatherEngine.GatherProfiles.resources" />
+    <EmbeddedResource Include="LazyEvo.LGatherEngine.GatherProfileForm.resources" />
+    <EmbeddedResource Include="LazyEvo.LGrindEngine.Helpers.ConverterForm.resources" />
+    <EmbeddedResource Include="LazyEvo.LGrindEngine.NpcClasses.TrainerDialog.resources" />
+    <EmbeddedResource Include="LazyEvo.LGrindEngine.PathControl.resources" />
+    <EmbeddedResource Include="LazyEvo.LGatherEngine.Settings.resources" />
+    <EmbeddedResource Include="LazyEvo.Forms.Main.resources" />
+    <EmbeddedResource Include="LazyEvo.Forms.Setup.resources" />
+    <EmbeddedResource Include="LazyEvo.LGrindEngine.Settings.resources" />
+    <EmbeddedResource Include="LazyEvo.Plugins.ExtraLazy.frmFrameDumper.resources" />
+    <EmbeddedResource Include="LazyEvo.Plugins.LazyData.frmProfessions.resources" />
+    <EmbeddedResource Include="LazyEvo.Plugins.RotationPlugin.RotatorForm.resources" />
+    <EmbeddedResource Include="LazyEvo.Plugins.RotationPlugin.RotationForm.resources" />
+    <EmbeddedResource Include="LazyEvo.Plugins.RotationPlugin.RotationManagerForm.resources" />
+    <EmbeddedResource Include="LazyEvo.Plugins.RotationPlugin.RotatorStatus.resources" />
+    <EmbeddedResource Include="LazyEvo.Properties.Resources.resources" />
+    <EmbeddedResource Include="LazyEvo.Forms.Selector.resources" />
+    <EmbeddedResource Include="LazyEvo.PVEBehavior.BehaviorForm.resources" />
+    <EmbeddedResource Include="LazyEvo.PVEBehavior.Builders.DeathknightBuilder.resources" />
+    <EmbeddedResource Include="LazyEvo.PVEBehavior.Builders.PaladinBuilder.resources" />
+    <EmbeddedResource Include="LazyEvo.PVEBehavior.RuleEditor.resources" />
+    <EmbeddedResource Include="LazyEvo.PVEBehavior.ScriptEditor.resources" />
+  </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
